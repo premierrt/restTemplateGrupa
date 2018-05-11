@@ -1,0 +1,20 @@
+https://spring.io/guides/gs/consuming-rest/
+
+http://www.baeldung.com/spring-boot-rest-client-swagger-codegen
+
+https://stackoverflow.com/questions/32623407/add-my-custom-http-header-to-spring-resttemplate-request-extend-resttemplate/32623548?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+https://howtodoinjava.com/spring/spring-restful/spring-restful-client-resttemplate-example/
+
+--obsluga kodów 400
+http://springinpractice.com/2013/10/07/handling-json-error-object-responses-with-springs-resttemplate
+
+
+--przyklad wywolania:
+http://localhost:7024/group-service/groups/prepaid/48790004980/members
+
+curl -X GET "http://localhost:7024/group-service/groups/prepaid/48790004980/members" -H "accept: */*" -H "System-User-Name: eshop" -H "System-Name: eshop" -H "Channel-Name: eshop" -H "Owner: P4" -H "Usage-Mode: NORMAL"
+
+{
+  "message": "Service 48790004980 is not a member of any group and hasn't open orders for activation in CRMD.",
+  "errorCode": "4.2"
+}
