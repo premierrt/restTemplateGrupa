@@ -47,18 +47,19 @@ public class ClientRestTemplateGroupApplication {
 
 			/// https://www.logicbig.com/tutorials/spring-framework/spring-web-mvc/http-entity.html
 			HttpEntity<String> entity = new HttpEntity<String>("paremeters", httpHeades);
-			org.springframework.http.ResponseEntity<String> respone = null;
+			org.springframework.http.ResponseEntity<GetGroupResponse> respone = null;
 
 			// When server returns an "unsuccessful" status code,
 			// DefaultResponseErrorHandler will throw a instance of
 			// HttpStatusCodeException, which has a method
 			// "getResponseBodyAsString()".
 			try {
-				respone = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+				respone = restTemplate.exchange(url, HttpMethod.GET, entity, GetGroupResponse.class);
+				System.out.println(respone.getBody().getMembers().toString());
 			} catch (HttpStatusCodeException ex) {
 				System.out.println(ex.getResponseBodyAsString());
 			}
-			System.out.println(respone);
+			//System.out.println(respone.getBody().getMembers().toString());
 
 			// dodac serializacje jeśli nie ma wyjatku
 			//http://www.baeldung.com/jackson-object-mapper-tutorial
