@@ -36,7 +36,7 @@ public class ClientRestTemplateGroupApplication {
 	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
 		return args -> {
 			System.out.println("start client ********************");
-			String url = "http://localhost:7024/group-service/groups/prepaid/48790004980/members";
+			String url = "http://localhost:7024/group-service/groups/prepaid/48796809221/members";
 			HttpHeaders httpHeades = new HttpHeaders();
 			httpHeades.set("System-User-Name", "eshop");
 			httpHeades.set("System-Name", "eshop");

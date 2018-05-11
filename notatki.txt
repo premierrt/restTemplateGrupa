@@ -10,6 +10,7 @@ http://springinpractice.com/2013/10/07/handling-json-error-object-responses-with
 
 
 --przyklad wywolania:
+48796809221, 48796809223
 http://localhost:7024/group-service/groups/prepaid/48790004980/members
 
 curl -X GET "http://localhost:7024/group-service/groups/prepaid/48790004980/members" -H "accept: */*" -H "System-User-Name: eshop" -H "System-Name: eshop" -H "Channel-Name: eshop" -H "Owner: P4" -H "Usage-Mode: NORMAL"
